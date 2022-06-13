@@ -27,7 +27,7 @@ export default function SearchBar({setNewsArray}: Props): JSX.Element {
         onChange={e => setInput(e.target.value)}
         // contentRight={<SendButton onClick={()=>{getNewData(input)}}/>}
       />
-      <Button color="gradient" onClick={()=>getNewData(input)}>Send</Button>
+      <Button color="default" onClick={()=>getNewData(input)}>Send</Button>
     </div>
     </div>
   );
