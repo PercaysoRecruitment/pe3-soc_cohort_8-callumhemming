@@ -26,6 +26,8 @@ Googling syntax is allowed, googling solutions is not.
 
 Please commit your solution within the time frame given to you, even if your solution is not complete. We will be interested in seeing how you approached the problem.
 
+//
+
 ## Extra credit
 
 If you're in the mood for showboating, plese feel free to show us what else you can do. E.g. you could automate tests for your solution.
