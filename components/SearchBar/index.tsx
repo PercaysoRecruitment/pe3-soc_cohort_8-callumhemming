@@ -1,34 +1,42 @@
 import React, { useState } from "react";
 import { Input, Button } from "@nextui-org/react";
-import SendButton from "./SendButton"
-import Style from "./Searchbar.module.css"
+import SendButton from "./SendButton";
+import Style from "./Searchbar.module.css";
 
 interface Props {
-    setNewsArray:any
+  setNewsArray: any;
+  getNewData: any;
 }
 
-export default function SearchBar({setNewsArray}: Props): JSX.Element {
+export default function SearchBar({
+  setNewsArray,
+  getNewData,
+}: Props): JSX.Element {
   const [input, setInput] = useState("");
-
-  async function getNewData(query:string){
-
-    const response = await fetch(`/api/news/${query}`)
-    const data = (await response.json()).payload
-
-    setNewsArray(data)
-  }
 
   return (
     <div className={Style.align}>
-
-    <div className={Style.compContainer}>
-      <Input
-      placeholder="Enter Search Here"
-        onChange={e => setInput(e.target.value)}
-        // contentRight={<SendButton onClick={()=>{getNewData(input)}}/>}
-      />
-      <Button color="default" onClick={()=>getNewData(input)}>Send</Button>
-    </div>
+      <form onSubmit={e => e.preventDefault()} className={Style.compContainer}>
+        <div className={Style.searchBar}>
+          <Input
+            autoFocus
+            size="lg"
+            placeholder="Enter Search Here"
+            onChange={e => setInput(e.target.value)}
+            // contentRight={<SendButton onClick={()=>{getNewData(input)}}/>}
+          />
+        </div>
+        <Button
+          size="sm"
+          color="success"
+          type="submit"
+          onClick={e => {
+            getNewData(input);
+          }}
+        >
+          Submit
+        </Button>
+      </form>
     </div>
   );
 }

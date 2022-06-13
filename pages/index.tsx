@@ -2,7 +2,7 @@ import { NewsCardTS } from '../types'
 import NewsCardsList from "../components/NewsCardsList"
 import SearchBar from "../components/SearchBar"
 import React, {useState} from "react"
-import {URL} from "../config"
+import NavBar from "../components/NavBar"
 
 
 interface Props{
@@ -16,9 +16,11 @@ export default function Home({data}:Props):JSX.Element{
 
 
   return(<>
-  <SearchBar
-  setNewsArray={setNewsArray}
-  />
+
+    <NavBar
+    setNewsArray={setNewsArray}
+    />
+
   <NewsCardsList
   newsArray={newsArray}/>
   </>)

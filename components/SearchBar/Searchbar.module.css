@@ -1,7 +1,11 @@
 .compContainer{
     display: flex;
     padding: 1em;
-    gap:1em;
+    gap:0.5em;
+    min-width: 400px;
+
+    align-items: center;
+    max-width: 600px;
 }
 
 
@@ -13,6 +17,9 @@
     margin-top: 2em;
 }
 
-.redeploy{
-    width: "10px";
+.searchBar{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
 }

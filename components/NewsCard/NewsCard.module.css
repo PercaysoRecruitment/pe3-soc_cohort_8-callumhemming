@@ -1,6 +1,7 @@
 .compContainer{
     width: 30vw;
-    min-width: "1000px";
+    min-width:300px;
+    max-width: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
