@@ -1,0 +1,27 @@
+.compContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 3em;
+  
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  min-width: 400px;
+  padding: 2em;
+  justify-self: flex-start;
+  gap:1em;
+}
+
+.searchBar {
+    border:1px red solid;
+  max-width: 300px;
+}
+
+.redeploy{width: 1px;}

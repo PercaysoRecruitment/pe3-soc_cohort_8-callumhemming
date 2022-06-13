@@ -1,31 +1,47 @@
+
 # Percayso Programming Exercise 3
 
-## Brief
+!! Deployed at: https://pe3-soc-cohort-8-callumhemming.vercel.app/ !!
+  
 
-Create a website that gets news from the GNews api:
+## News App
 
-    https://gnews.io/?ref=apilist.fun
-    
-Your website must:    
-      
-  1) Include a search area
-  2) Include a results area
-  3) Include tests
-  4) Be hosted on a publicly accessible URL, so we can see it working
+  
 
-You are free to choose:
+Welcome to this project!
 
-  1) How to style all aspects of the page.
-  2) What language and framework to use.
+This project is a news app using the gnews.io API, it allows you to search the API and displays the results in a neat UI.
 
-We are looking to understand your approach to solving this problem as much as the actual technical solution. Add comments to your code to help us understand your thinking. 
+  
 
-Googling syntax is allowed, googling solutions is not.
+This project is lovingly built with:
 
-## Submitting your solution
+ - Typescript
+ -  Next.js
+ -  React
+ -  Javascript
+ -  JSX
+ -  CSS Modules
 
-Please commit your solution within the time frame given to you, even if your solution is not complete. We will be interested in seeing how you approached the problem.
 
-## Extra credit
 
-If you're in the mood for showboating, plese feel free to show us what else you can do. E.g. you could automate tests for your solution.
+  
+  
+
+## Set up
+
+  
+
+ - Run <code>npm i</code> to install dependencies.
+ - Go to ./.config.env and add in your token. Change the file name to
+   .env.local
+   -Go to ./pages/index.tsx and change fetchString to <code>http://localhost:3000/api/news/global</code>
+ - Run <code>npm run dev</code> to start the development server
+ - Navigate to <code>localhost:3000</code> in your browser
+ - Have fun!
+
+  
+
+## Possible issues
+
+  The deployed project uses the hobby level access from gnews.io which is limited to 100 requests, which then has a 8 hour cool off period. If no results are showing it's because the app is cooling off. 
