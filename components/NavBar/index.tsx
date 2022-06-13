@@ -1,4 +1,4 @@
-import { Card, Text,Button } from "@nextui-org/react";
+import { Card, Text,Button, Row } from "@nextui-org/react";
 import SearchBar from "../SearchBar";
 import Style from "./NavBar.module.css";
 
@@ -20,19 +20,24 @@ export default function NavBar({ setNewsArray }: Props): JSX.Element {
 
   return (
     <>
-      <Card>
+      <Card css={{backgroundColor:"#7DAA92"}}>
         <div className={Style.compContainer}>
           <div className={Style.title}>
-            <Text h1>Get some news!</Text>
+            <Text 
+             css={{color:"white"}}
+            h1>GET SOME NEWS TODAY!</Text>
+            <Card.Divider
+           
+            />
+          <Button.Group>
+            <Button ghost css={{backgroundColor:"white"}} onClick={()=>{getNewData("Science")}}>Science</Button>
+            <Button ghost css={{backgroundColor:"white"}} onClick={()=>{getNewData("Sports")}}>Sports</Button>
+            <Button ghost css={{backgroundColor:"white"}} onClick={()=>{getNewData("Technology")}}>Technology</Button>
+            <Button ghost css={{backgroundColor:"white"}} onClick={()=>{getNewData("Dogs")}}>Dogs</Button>
+          </Button.Group>
           </div>
           
           <SearchBar getNewData={getNewData} setNewsArray={setNewsArray} />
-          <Button.Group>
-            <Button onClick={()=>{getNewData("Science")}}>Science</Button>
-            <Button onClick={()=>{getNewData("Sports")}}>Sports</Button>
-            <Button onClick={()=>{getNewData("Technology")}}>Technology</Button>
-            <Button onClick={()=>{getNewData("Dogs")}}>Dogs</Button>
-          </Button.Group>
         </div>
       </Card>
     </>

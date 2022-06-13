@@ -27,6 +27,7 @@ export default function SearchBar({
           />
         </div>
         <Button
+        css={{backgroundColor:"#8E4A49"}}
           size="sm"
           color="success"
           type="submit"
